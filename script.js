@@ -2,8 +2,10 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
-let loading = document.getElementById('loader');
-let quoteBox = document.getElementById('quote-box');
+
+    let loading = document.getElementById('loader');
+    let quoteBox = document.getElementById('quote-box');
+
 
 //show Loader
 function loader() {
@@ -12,30 +14,31 @@ function loader() {
 }
 //hide loader
 function complete() {
-    if (!loader.hidden) {
+    if (!loading.hidden) {
         loading.hidden = true;
         quoteBox.hidden = false;
     }
 }
 //API is called here using async function
 async function newQuote() {
-    
+    loader();
+
     const apiUrl = 'https://dummyjson.com/quotes';
     try {
-        complete();
         const response = await fetch(apiUrl);
-        let data = await response.json();
+        const data = await response.json();
         console.log(data);
 
         let random = Math.floor(Math.random() * data.quotes.length);
         console.log(random);
         authorText.innerText = data.quotes[random].author;
         quoteText.innerText = data.quotes[random].quote;
-        loader();
+        
     } catch (error) {
         console.log('error detected in api call');
-        newQuote();
-        //  process.exit(1);
+        // newQuote();
+    }finally{
+        complete();
     }
 }
 newQuote();
@@ -49,5 +52,7 @@ function tweetQuote() {
 
 newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
+
+
 
 
