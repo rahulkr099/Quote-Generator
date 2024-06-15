@@ -19,3 +19,17 @@ async function newQuote(){
     }
 }
 newQuote();
+
+//Tweet Quote
+function tweetQuote(){
+    const quote = quoteText.innerText;
+    const author = authorText.innerText;
+
+    const twitterUrl = 'https://twitter.com/intent/tweet?text=${quote} - ${author}';
+    window.open(twitterUrl, '_blank');
+}
+
+newQuoteBtn.addEventListener('click',newQuote);
+twitterBtn.addEventListener('click',tweetQuote);
+
+
