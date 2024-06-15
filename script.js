@@ -17,6 +17,7 @@ function complete() {
         quoteBox.hidden = false;
     }
 }
+//API is called here using async function
 async function newQuote() {
     
     const apiUrl = 'https://dummyjson.com/quotes';
