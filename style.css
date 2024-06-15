@@ -1,0 +1,68 @@
+*{  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+.container{
+    font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+    border: 3px solid red;
+    width: 100vw;height: 100vh;
+    background-color: #ddd9e3;
+background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23a5877e' fill-opacity='0.46'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.quote-box{
+    width: auto;max-width: 73vw;
+    height: auto; max-height: 73vh;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px 4px rgb(241, 116, 116);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px;
+    /* background-color: rgb(220, 204, 204); */
+}
+.fa-quote-right{
+    font-size: 3rem;
+}
+.fa-quote-left{
+    font-size: 3rem;
+}
+.quote{
+    font-size: 1.7rem;
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.author{
+    font-size: 1.1rem;
+    margin-bottom: 1.6rem;
+    font-style: italic;
+    font-weight: 100;
+}
+.twitter{
+    color: white;
+    background-color: black;
+    border-radius: 7px;
+    margin-right: 9rem;
+    padding: 6px;
+    font-size: 1.4rem;
+}
+.twitter:hover{
+    color: rgb(0, 183, 255);
+    cursor: pointer;
+}
+.new-quote{
+    color: white;
+    background-color: black;
+    border-radius: 7px;
+    padding: 6px;
+    font-size: 1.2rem;
+}
+.new-quote:hover{
+    color: rgb(157, 154, 154);
+    cursor: pointer;
+}
