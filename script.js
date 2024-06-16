@@ -22,7 +22,6 @@ function complete() {
 //API is called here using async function
 async function newQuote() {
     loader();
-
     const apiUrl = 'https://dummyjson.com/quotes';
     try {
         const response = await fetch(apiUrl);
@@ -33,13 +32,13 @@ async function newQuote() {
         console.log(random);
         authorText.innerText = data.quotes[random].author;
         quoteText.innerText = data.quotes[random].quote;
-        
+        complete();
     } catch (error) {
         console.log('error detected in api call');
-        // newQuote();
-    }finally{
-        complete();
-    }
+        newQuote();}
+    // }finally{
+    //     complete();
+    // }
 }
 newQuote();
 //Tweet Quote
