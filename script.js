@@ -10,13 +10,13 @@ const newQuoteBtn = document.getElementById('new-quote');
 //show Loader
 function loader() {
     loading.hidden = false;
-    quoteBox.hidden = true;
+    quoteBox.style.display = "none";
 }
 //hide loader
 function complete() {
     if (!loading.hidden) {
         loading.hidden = true;
-        quoteBox.hidden = false;
+        quoteBox.style.display= "";
     }
 }
 //API is called here using async function
